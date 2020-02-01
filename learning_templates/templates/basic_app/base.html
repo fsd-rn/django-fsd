@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>DevEnv</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  </head>
+  <body>
+      <nav class="navbar navbar-light bg-light navbar-expand-lg">
+       <div class="container">
+          <div class="navbar-nav">
+             <a href="{% url 'index' %}" class="navbar-brand">Brand</a>
+             <a href="{% url 'admin:index' %}" class="navbar-item nav-link">Admin</a>
+             <a href="{% url 'basic_app:other' %}" class="navbar-item nav-link">Other</a>
+          </div>
+       </div>
+      </nav>
+
+        <div class="container">
+          {% block body_block %}
+          {% endblock %}
+
+        </div>
+
+
+  </body>
+</html>
